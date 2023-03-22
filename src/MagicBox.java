@@ -10,7 +10,7 @@ public class MagicBox<T> {
 
     boolean add(T item) {
         for (int i = 0; i < items.length; i++) {
-            if (items[i].equals(null)) {
+            if (items[i] == (null)) {
                 items[i] = item;
                 return true;
             }
@@ -23,7 +23,7 @@ public class MagicBox<T> {
         int randomInt = 0;
 
         for (int i = 0; i < items.length; i++) {
-            if (items[i].equals(null)) {
+            if (items[i] == (null)) {
                 countNull += 1;
             }
         }
