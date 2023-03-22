@@ -1,9 +1,12 @@
 public class Main {
     public static void main(String[] args) {
-        MagicBox <Integer> magicBox = new MagicBox<>(5);
-        magicBox.add(1);
-        magicBox.add(2);
-        magicBox.add(3);
+        MagicBox <String> magicBox = new MagicBox<>(5);
+        magicBox.add("Nikita");
+        magicBox.add("Vika");
+        magicBox.add("Jastin");
+        magicBox.add("Geydgi");
+        magicBox.add("huuifd");
         magicBox.pick();
+
     }
 }

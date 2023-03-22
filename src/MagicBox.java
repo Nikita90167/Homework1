@@ -32,6 +32,7 @@ public class MagicBox<T> {
         } else {
             Random random = new Random();
             randomInt = random.nextInt(items.length);
+            System.out.println(items[randomInt]);
             return items[randomInt];
         }
     }
