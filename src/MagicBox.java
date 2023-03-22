@@ -1,6 +1,8 @@
-public class MagicBox <T> {
+import java.util.Random;
 
-    private T[] items;
+public class MagicBox<T> {
+
+    private final T[] items;
 
     public MagicBox(int count) {
         this.items = (T[]) new Object[count];
@@ -16,17 +18,21 @@ public class MagicBox <T> {
         return false;
     }
 
-    T pick(){
+    T pick() {
         int countNull = 0;
+        int randomInt = 0;
+
         for (int i = 0; i < items.length; i++) {
             if (items[i].equals(null)) {
                 countNull += 1;
             }
-    }
-        if (countNull != 0) {
-            throw new RuntimeException ("коробка не полна и осталось ещё " + countNull + " ячеек заполнить");
-        } else {
-
         }
-
+        if (countNull != 0) {
+            throw new RuntimeException("коробка не полна и осталось ещё " + countNull + " ячеек заполнить");
+        } else {
+            Random random = new Random();
+            randomInt = random.nextInt(items.length);
+            return items[randomInt];
+        }
+    }
 }
