@@ -17,6 +17,16 @@ public class MagicBox <T> {
     }
 
     T pick(){
-        return ;
+        int countNull = 0;
+        for (int i = 0; i < items.length; i++) {
+            if (items[i].equals(null)) {
+                countNull += 1;
+            }
     }
+        if (countNull != 0) {
+            throw new RuntimeException ("коробка не полна и осталось ещё " + countNull + " ячеек заполнить");
+        } else {
+
+        }
+
 }
